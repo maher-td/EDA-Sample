@@ -1,0 +1,59 @@
+﻿@import "Abstract/_variables.scss";
+@import "Abstract/_mixins.scss";
+
+@import "Components/_main-slider.scss";
+
+@import "Components/_genericComponents.scss"; 
+@import "Layout/_header.scss";
+@import "Layout/_footer.scss";
+@import "Pages/_homepage.scss";
+
+@font-face {
+    font-family: 'SE';
+    src: url('../Fonts/SegoeUI/SegoeUI.eot'); /* IE9 Compat Modes */
+    src: url('../Fonts/SegoeUI/SegoeUI.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../Fonts/SegoeUI/SegoeUI.woff') format('woff'), /* Pretty Modern Browsers */
+    url('../Fonts/SegoeUI/SegoeUI.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../Fonts/SegoeUI/SegoeUI.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: "TB";
+    src: url("../Fonts/Tajawal-Bold/Tajawal-Bold.eot");
+    src: url("../Fonts/Tajawal-Bold/Tajawal-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../Fonts/Tajawal-Bold/Tajawal-Bold.woff") format("woff"),
+    url("../Fonts/Tajawal-Bold/Tajawal-Bold.ttf") format("truetype"),
+    url("../Fonts/Tajawal-Bold/Tajawal-Bold.svg#svgFontName") format("svg");
+}
+
+@font-face { 
+    font-family: "TR"; 
+    src: url("../Fonts/Tajawal/Tajawal-Regular.eot");
+    src: url("../Fonts/Tajawal/Tajawal-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../Fonts/Tajawal/Tajawal-Regular.woff") format("woff"),
+    url("../Fonts/Tajawal/Tajawal-Regular.ttf") format("truetype"),
+    url("../Fonts/Tajawal/Tajawal-Regular.svg#svgFontName") format("svg");
+}
+ 
+@font-face {
+    font-family: "icomoon";
+    src: url("../Fonts/Icomoon/icomoon.eot");
+    src: url("../Fonts/Icomoon/icomoon.eot?#iefix") format("embedded-opentype"),
+    url("../Fonts/Icomoon/icomoon.woff") format("woff"),
+    url("../Fonts/Icomoon/icomoon.ttf") format("truetype"),
+    url("../Fonts/Icomoon/icomoon.svg#svgFontName") format("svg");
+}
+
+*:not(i) {
+    font-family: "SE";
+}
+
+.contrast {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    background-color: #000;
+}
+
+.generic-title {
+    font-family: "TB";
+}

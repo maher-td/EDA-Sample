@@ -1,0 +1,109 @@
+﻿/*flex*/
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flex-direction($direction) {
+    -webkit-flex-direction: $direction;
+    -moz-flex-direction: $direction;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+}
+
+@mixin flex-wrap($wrap) {
+    -webkit-flex-wrap: $wrap;
+    -moz-flex-wrap: $wrap;
+    -ms-flex-wrap: $wrap;
+    flex-wrap: $wrap;
+}
+
+@mixin align-items($align) {
+    -webkit-align-items: $align;
+    -moz-align-items: $align;
+    -ms-align-items: $align;
+    align-items: $align;
+}
+
+@mixin justify-content($justify) {
+    -webkit-justify-content: $justify;
+    -moz-justify-content: $justify;
+    -ms-justify-content: $justify;
+    justify-content: $justify;
+    -ms-flex-pack: $justify;
+}
+
+
+
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+// rotate
+@mixin rotate ($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+
+/*Custom Mixins*/
+@mixin listing-tag ($v-position,$h-position,$font-size,$bg-color) {
+    position: absolute;
+    #{$start}: $h-position;
+    top: $v-position;
+    padding: 0 10px 3px;
+    border-radius: 20px;
+    background-color: $bg-color;
+    color: $white;
+    font-weight: bold;
+    font-size: $font-size;
+    text-align: center
+}
+
+@mixin blur-end($width,$opacity,$bgColor) {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    #{$end}: 0;
+    pointer-events: none;
+    background-image: linear-gradient(to $end, rgba(255,255,255,0),$bgColor $opacity);
+    width: $width;
+    height: 100%;
+}
+
+@mixin blur-start($width,$opacity,$bgColor) {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    #{$start}: 0;
+    pointer-events: none;
+    background-image: linear-gradient(to $start, rgba(255,255,255,0),$bgColor $opacity);
+    width: $width;
+    height: 100%;
+}
+
+
+@mixin placeholder {
+    ::-webkit-input-placeholder {
+        @content
+    }
+
+    :-moz-placeholder {
+        @content
+    }
+
+    ::-moz-placeholder {
+        @content
+    }
+
+    :-ms-input-placeholder {
+        @content
+    }
+}
