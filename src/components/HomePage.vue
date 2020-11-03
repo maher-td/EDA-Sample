@@ -1,27 +1,102 @@
 <template>
   <div>
-    <div id="dark-mode-toggle" title="Dark mode toggle">🌒</div>
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#"><img src="../assets/logo.png"/></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-links">
+          <!-- <div id="dark-mode-toggle" title="Dark mode toggle">🌒</div> -->
+          <div class="dark-theme-toggle">
+            <label class="switch">
+              <input type="checkbox">
+              <span id="dark-mode-toggle" class="slider round"></span>
+            </label>
+            <span>Click Here</span>
+          </div>
+          <ul class="nav navbar-links-container">
+              <li class="nav-item font-options">
+                <ul class="nav">            
+                  <li class="nav-item font-up">
+                    <a class="nav-link" href="javascript:void(0)">A+</a>
+                  </li>
+                  <li class="nav-item font-down">
+                    <a class="nav-link" href="javascript:void(0)">A-</a>
+                  </li>
+                  <li class="nav-item reset-font">
+                    <a class="nav-link" href="javascript:void(0)"><i class="icon-refresh"></i>A</a>
+                  </li>
+                </ul>
+              </li>
 
-<div class="home-page__highlights">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
+              <li class="nav-item social-options">
+                <ul class="nav">
+                  <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://www.facebook.com/">
+                      <i class="icon-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://twitter.com/?lang=en">
+                      <i class="icon-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://www.youtube.com/">
+                      <i class="icon-youtube"></i>
+                    </a>
+                  </li>
+                    <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://www.instagram.com/?hl=en">
+                      <i class="icon-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+              </li>
 
+              <li class="nav-item hotline">
+                <span><i class="icon-phone"></i>19181</span>
+              </li>
+
+              <li class="nav-item search">
+                <i class="icon-search"></i>
+              </li>
+          </ul>
+        </div>
+        <div class="navbar-nav-items">
+          <ul class="navbar-nav">
+            <li class="nav-item" v-bind:key="index" v-for="(item,index) in 8">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+          </ul>
+          <div class="login">
+            <a href="#">Login</a>
+          </div>
+        </div>
       </div>
-      <div class="col-md-8">
-        <swiper ref="awesomeSwiperHighlights" :options="swiperOptionHighlights">
-          <swiper-slide v-bind:key="index" v-for="(item, index) in 5">
-            <div class="generic-slider__details">
-              <div class="generic-slider__img">
-                <img src="https://picsum.photos/id/300/900/500" />
+    </nav>
+
+    <div class="home-page__highlights">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-8">
+          <swiper ref="awesomeSwiperHighlights" :options="swiperOptionHighlights">
+            <swiper-slide v-bind:key="index" v-for="(item, index) in 5">
+              <div class="generic-slider__details">
+                <div class="generic-slider__img">
+                  <img src="https://picsum.photos/id/300/900/500" />
+                </div>
               </div>
-            </div>
-          </swiper-slide>
-        </swiper>
+            </swiper-slide>
+          </swiper>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+    </div>
 
     <div class="home-page__services">
       <div class="container">
@@ -227,7 +302,7 @@
             <div class="logo-container">
               <div class="logo-item">
                 <div class="logo">
-                  <a href="#" class="logo-link"><img src="https://picsum.photos/id/300/345/110" /></a>
+                  <a href="#" class="logo-link"><img src="../assets/logo.png" /></a>
                 </div>
               </div>
               <div class="footer-brief">
@@ -349,13 +424,13 @@ export default {
     });
   
     function enableDarkMode() {
-      darkModeToggleBtn.innerHTML = '☀️';
+      // darkModeToggleBtn.innerHTML = '☀️';
       localStorage.setItem('theme', 'dark');
       document.body.classList.add('dark-mode');
     }
 
     function disableDarkMode() {
-      darkModeToggleBtn.innerHTML = '🌒';
+      // darkModeToggleBtn.innerHTML = '🌒';
       localStorage.setItem('theme', 'light');
       document.body.classList.remove('dark-mode');
     }

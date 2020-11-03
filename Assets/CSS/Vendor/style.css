@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('./fonts/icomoon.eot?bnkgmp');
-  src:  url('./fonts/icomoon.eot?bnkgmp#iefix') format('embedded-opentype'),
-    url('./fonts/icomoon.ttf?bnkgmp') format('truetype'),
-    url('./fonts/icomoon.woff?bnkgmp') format('woff'),
-    url('./fonts/icomoon.svg?bnkgmp#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?mlnejf');
+  src:  url('fonts/icomoon.eot?mlnejf#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?mlnejf') format('truetype'),
+    url('fonts/icomoon.woff?mlnejf') format('woff'),
+    url('fonts/icomoon.svg?mlnejf#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-facebook:before {
+  content: "\e902";
+}
+.icon-instagram:before {
+  content: "\e903";
+}
+.icon-phone:before {
+  content: "\e904";
+}
+.icon-refresh:before {
+  content: "\e905";
+}
+.icon-search:before {
+  content: "\e906";
+}
+.icon-twitter:before {
+  content: "\e907";
+}
+.icon-youtube:before {
+  content: "\e908";
+}
+.icon-send-mail:before {
+  content: "\e901";
+  color: #c28a33;
+}
 .icon-document:before {
   content: "\e900";
   color: #c28a33;
