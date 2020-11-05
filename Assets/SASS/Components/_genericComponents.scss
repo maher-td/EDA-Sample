@@ -23,39 +23,45 @@
   --image-opacity: 0.85;
 }
 
-.generic-title {
-    color: var(--primary-title-color);
-    font-size: 22px;
-    text-align: $start;
-    padding-bottom: 40px;
-    position: relative;
-    &:after {
-      content: "";
-      background-color: #c28a33;
-      height: 7px;
-      width: 40px;
-      position: absolute;
-      #{$start}: 0;
-      bottom: 0;
-    }
-    &:before {
-      content: "";
-      background-color: var(--primary-title-color);
-      height: 1px;
-      width: 30px;
-      position: absolute;
-      #{$start}: -35px;
-      top: 15px;
-    }
-  }
+.generic-banner {
+  background-color: var(--primary-bg);
+  padding: 75px 0 20px;
+}
 
-  .generic-description {
-    color: var(--secondary-title-color);
-    font-size: 51px;
-    font-weight: bold;
-    text-align: $start;
-    margin-bottom: 45px;
+.generic-title {
+  color: var(--primary-title-color);
+  font-size: calc(14px + (22 - 14) * ((100vw - 768px) / (1366 - 768)));
+  text-align: $start;
+  padding-bottom: 40px;
+  position: relative;
+  &:after {
+    content: "";
+    background-color: #c28a33;
+    height: 7px;
+    width: 40px;
+    position: absolute;
+    #{$start}: 0;
+    bottom: 0;
   }
+  &:before {
+    content: "";
+    background-color: var(--primary-title-color);
+    height: 1px;
+    width: 30px;
+    position: absolute;
+    #{$start}: -35px;
+    top: 15px;
+  }
+}
+
+.generic-description {
+  color: var(--secondary-title-color);
+  font-size: calc(30px + (51 - 30) * ((100vw - 768px) / (1366 - 768)));
+  font-weight: bold;
+  text-align: $start;
+  padding-bottom: 45px;
+  margin: 0;
+}
 
 input,
 select,
@@ -76,10 +82,60 @@ textarea {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-input[type=number] {
-    -moz-appearance: textfield;
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 768px) {
+  .generic-banner {
+    padding: 80px 0 0;
+  }
+
+  .generic-title {
+    font-size: calc(14px + (22 - 14) * ((100vw - 768px) / (1366 - 768)));
+    padding-bottom: 20px;
+    &:after {
+      height: 5px;
+      width: 30px;
+    }
+    &:before {
+      width: 20px;
+      #{$start}: -25px;
+      top: 9px;
+    }
+  }
+
+  .generic-description {
+    font-size: calc(30px + (51 - 30) * ((100vw - 768px) / (1366 - 768)));
+    padding-bottom: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .generic-banner {
+    padding: 30px 0 0;
+  }
+
+  .generic-title {
+    font-size: 12px;
+    padding-bottom: 17px;
+    &:after {
+      height: 5px;
+      width: 25px;
+    }
+    &:before {
+      width: 10px;
+      #{$start}: -12px;
+      top: 8px;
+    }
+  }
+
+  .generic-description {
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
 }

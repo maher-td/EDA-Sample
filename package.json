@@ -27,7 +27,8 @@
     "sass-loader": "^10.0.4",
     "swiper": "^4.5.0",
     "vue": "^2.6.11",
-    "vue-awesome-swiper": "^4.1.1"
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-multiselect": "^2.1.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

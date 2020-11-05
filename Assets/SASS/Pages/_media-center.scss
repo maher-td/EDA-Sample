@@ -1,0 +1,168 @@
+.media-center {
+  padding: 50px 130px 50px;
+  background-color: var(--secondary-bg);
+  .filter-data {
+    display: flex;
+    margin-bottom: 60px;
+    .filter {
+      font-size: 16px;
+      color: var(--dark-color);
+      margin-#{$end}: 30px;
+    }
+    .multiselect {
+      width: 115px;
+      &.multiselect--active {
+        background-color: transparent;
+      }
+      .multiselect__select {
+        display: none;
+      }
+      .multiselect__tags {
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        min-height: 0;
+        .multiselect__single {
+          cursor: pointer;
+          margin-top: 2px;
+        }
+        .multiselect__placeholder {
+          color: #df8b0e;
+        }
+      }
+      .multiselect__content-wrapper {
+        background-color: var(--secondary-bg);
+        border: 1px solid #df8b0e;
+        border-top: 0;
+        border-bottom-#{$start}-radius: 10px;
+        border-bottom-#{$end}-radius: 10px;
+        .multiselect__content {
+          padding-bottom: 5px;
+          .multiselect__element {
+            .multiselect__option {
+              font-size: 16px;
+              padding: 5px;
+              min-height: 0;
+              color: var(--dark-color);
+            }
+            .multiselect__option--selected {
+              background-color: transparent;
+              font-weight: normal;
+            }
+            .multiselect__option--highlight {
+              background-color: var(--secondary-bg);
+              color: #df8b0e;
+            }
+          }
+        }
+      }
+    }
+  }
+  .gallery-card {
+    margin-bottom: 30px;
+    .card-img {
+      position: relative;
+      img {
+        max-width: 100%;
+        border-radius: 0;
+        border-top-#{$start}-radius: 15px;
+      }
+      .video-thumbnail {
+        position: absolute;
+        top: 0;
+        #{$start}: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(30, 35, 55, 0.6);
+        border-top-#{$start}-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon-play-button {
+          font-size: 65px;
+        }
+      }
+      .imgs-number {
+        font-size: calc(8px + (12 - 8) * ((100vw - 768px) / (1366 - 768)));
+        background-color: rgba(30, 35, 55, 0.6);
+        color: #ffffff;
+        position: absolute;
+        top: 10px;
+        #{$end}: 10px;
+        padding: 5px 15px;
+        border-radius: 300px;
+      }
+    }
+    .card-content {
+      padding: 25px 15px;
+      background-color: #ffffff;
+      position: relative;
+      border-bottom-#{$start}-radius: 15px;
+      border-bottom-#{$end}-radius: 15px;
+      .card-details {
+        font-size: calc(13px + (23 - 13) * ((100vw - 768px) / (1366 - 768)));
+        color: #000000;
+        margin-bottom: 0;
+      }
+      .card-category {
+        font-size: calc(9px + (16 - 9) * ((100vw - 768px) / (1366 - 768)));
+        color: #ffffff;
+        background-color: #df8b0e;
+        padding: 5px 35px;
+        position: absolute;
+        top: -16px;
+        #{$start}: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .media-center {
+    padding: 75px 0 0;
+    .gallery-card {
+      .imgs-number {
+        font-size: calc(8px + (12 - 8) * ((100vw - 768px) / (1366 - 768)));
+        top: 5px;
+        #{$end}: 5px;
+        padding: 5px 10px;
+      }
+      .card-content {
+        padding: 15px 10px;
+        .card-details {
+          font-size: calc(13px + (23 - 13) * ((100vw - 768px) / (1366 - 768)));
+        }
+        .card-category {
+          font-size: calc(9px + (16 - 9) * ((100vw - 768px) / (1366 - 768)));
+          padding: 5px 25px;
+          top: -12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .media-center {
+    padding: 75px 0px 30px;
+    .gallery-card {
+      .imgs-number {
+        font-size: 10px;
+        top: 10px;
+        #{$end}: 10px;
+        padding: 5px 15px;
+      }
+      .card-content {
+        padding: 25px 30px 15px;
+        .card-details {
+          font-size: 16px;
+        }
+        .card-category {
+          font-size: 12px;
+          padding: 5px 35px;
+          top: -14px;
+        }
+      }
+    }
+  }
+}

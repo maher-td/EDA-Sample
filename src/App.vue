@@ -1,16 +1,21 @@
 <template>
   <div id="app">
-    <HomePage />
+    <!-- <HomePage /> -->
+    <PhotosGallery />
+    <!-- <VideosGallery /> -->
   </div>
 </template>
 
 <script>
-import HomePage from './components/HomePage.vue'
-
+// import HomePage from './components/HomePage.vue'
+import PhotosGallery from './components/PhotosGallery.vue'
+// import VideosGallery from './components/VideosGallery.vue'
 export default {
   name: 'App',
   components: {
-    HomePage
+    // HomePage,
+    PhotosGallery,
+    // VideosGallery
   }
 }
 </script>
