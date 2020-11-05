@@ -1,5 +1,5 @@
 .media-center {
-  padding: 50px 130px 50px;
+  padding: 50px 0;
   background-color: var(--secondary-bg);
   .filter-data {
     display: flex;
@@ -10,10 +10,8 @@
       margin-#{$end}: 30px;
     }
     .multiselect {
-      width: 115px;
-      &.multiselect--active {
-        background-color: transparent;
-      }
+      width: 120px;
+      position: relative;
       .multiselect__select {
         display: none;
       }
@@ -24,10 +22,30 @@
         min-height: 0;
         .multiselect__single {
           cursor: pointer;
+          padding: 0;
           margin-top: 2px;
+          background-color: transparent;
+          color: #df8b0e;
+          &:after {
+            content: "\e90a";
+            font-family: "icomoon";
+            color: #df8b0e;
+            font-size: 8px;
+            margin-left: 5px;
+          }
         }
         .multiselect__placeholder {
           color: #df8b0e;
+        }
+      }
+      &.multiselect--active {
+        background-color: transparent;
+        .multiselect__tags {
+          .multiselect__single {
+            &:after {
+              content: "\e90b";
+            }
+          }
         }
       }
       .multiselect__content-wrapper {
@@ -67,7 +85,7 @@
         border-radius: 0;
         border-top-#{$start}-radius: 15px;
       }
-      .video-thumbnail {
+      .card-thumbnail {
         position: absolute;
         top: 0;
         #{$start}: 0;
@@ -80,6 +98,23 @@
         align-items: center;
         .icon-play-button {
           font-size: 65px;
+        }
+      }
+      &.card-img-details {
+        img {
+          border-radius: 0;
+        }
+        .card-thumbnail {
+          opacity: 0;
+          transition: 0.5s;
+          .icon-expand {
+            font-size: 30px;
+          }
+        }
+        &:hover {
+          .card-thumbnail {
+            opacity: 1;
+          }
         }
       }
       .imgs-number {
